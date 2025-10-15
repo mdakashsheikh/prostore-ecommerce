@@ -6,7 +6,7 @@ import { DropdownMenu } from "@radix-ui/react-dropdown-menu";
 import { useTheme } from "next-themes"; 
 import { SunIcon, MoonIcon, SunMoon } from "lucide-react";
 
-const MoodToggle = () => {
+const ModeToggle = () => {
     const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme()
   
@@ -48,4 +48,4 @@ const MoodToggle = () => {
     );
 }
  
-export default MoodToggle;
+export default ModeToggle;
