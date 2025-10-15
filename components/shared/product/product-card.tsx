@@ -1,12 +1,11 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import ProductPrice from "./product-price";
+import { Product } from "@/types";
 
-interface IProductCard {
-    product: any
-}
 
-const ProductCard = ({ product }: IProductCard) => {
+const ProductCard = ({ product }: {product: Product}) => {
     return ( 
         <Card className="w-full max-w-sm">
             <CardHeader className="p-0 items-center">
@@ -29,7 +28,8 @@ const ProductCard = ({ product }: IProductCard) => {
                     <p>{ product.rating } Srars</p>
                     {
                         product.stock > 0 ? (
-                            <p className="font-bold">{product.price}</p>
+                            // <p className="font-bold">{product.price}</p>
+                            <ProductPrice value={Number(product.price)} className="text-red-500"/>
                         ) : (
                             <p className="text-destructive">Out Of Stock</p>
                         )

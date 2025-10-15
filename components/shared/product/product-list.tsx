@@ -1,8 +1,9 @@
 import ProductCard from "./product-card";
+import { Product } from "@/types";
 
 interface IProductList { 
-    data: any; 
-    title?: string; 
+    data: Product[];
+    title: string;
     limit?: number 
 }
 
