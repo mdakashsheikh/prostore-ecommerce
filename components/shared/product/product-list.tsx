@@ -16,7 +16,7 @@ const ProductList = ({ data, title, limit }: IProductList) => {
 
             {data.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {limitedData.map((product: any) => (
+                    {limitedData.map((product: Product) => (
                         <ProductCard key={product.slug} product={product}/>
                     ))}
                 </div>
