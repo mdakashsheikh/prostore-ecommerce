@@ -6,7 +6,7 @@ import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
-import { addItemToCart } from "@/lib/actions/cart.action";
+import { addItemToCart } from "@/lib/actions/cart.actions";
 
 const AddToCart = ({item}: {item: CartItem }) => {
     const router = useRouter()
@@ -26,7 +26,7 @@ const AddToCart = ({item}: {item: CartItem }) => {
 
         // Handle success add to cart
         toast({
-            description: `${item.name} added to cart`,
+            description: res.message,
             action: (
                 <ToastAction 
                     className="bg-primary text-white hover:bg-gray-800" 
@@ -41,6 +41,7 @@ const AddToCart = ({item}: {item: CartItem }) => {
 
     return ( 
         <Button className="w-full" type="button" onClick={handleAddToCart}>
+            <Plus />
             Add To Cart
         </Button>
      );

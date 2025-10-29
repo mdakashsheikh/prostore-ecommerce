@@ -31,3 +31,14 @@ export function formatError(error: any) {
     return typeof error.message === 'string' ? error.message : JSON.stringify(error.meessage)
   }
 }
+
+// Round number to 2 decimal places
+export function round2(value: number | string) {
+  if(typeof value === 'number') {
+    return Math.round((value + Number.EPSILON));
+  } else if(typeof value === 'string') {
+
+  } else {
+    throw new Error('Value is not a number or string')
+  }
+}
