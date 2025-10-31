@@ -15,3 +15,14 @@ export const signUpDefaultValues = {
     pawssword: '',
     confirmPassword: ''
 }
+
+export const shippingAddressDefaultValues = {
+    fullName: 'John Smith',
+    streetAddress: '123 Main st',
+    city: 'Anytwon',
+    postalCode : '12345',
+    country: 'USA'
+}
+
+export const PAYMENT_METHOD = process.env.PAYMENT_METHOD ? process.env.PAYMENT_METHOD.split(", ") : ['Paypal', 'Stripe', 'CashOnDelevery']
+export const DEFAULT_PAYMENT_METHOD = process.env.DEFAULT_PAYMENT_METHOD || 'Paypal'
