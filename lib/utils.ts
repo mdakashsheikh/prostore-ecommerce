@@ -20,7 +20,7 @@ export function formatNumberWithDecimal(num: number): string {
 // Format errors
 export function formatError(error: any) {
   if(error.name === 'ZodError') {
-    const fieldErrors = Object.keys(error.errors).map((field) => error.errors[field].message)
+    const fieldErrors = Object.keys(error.errors).map((field) => error.errors[field].message) || 'Error'
 
     return fieldErrors.join('. ');
   } else if(error.name === 'PrismaClientKnownRequestError' && error.code === 'P2002') {
