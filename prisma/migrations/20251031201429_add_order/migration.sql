@@ -6,7 +6,7 @@ CREATE TABLE "Order" (
     "paymentMethod" TEXT NOT NULL,
     "paymentResul" JSON,
     "itemsPrice" DECIMAL(12,2) NOT NULL,
-    "shoppingPrice" DECIMAL(12,2) NOT NULL,
+    "shippingPrice" DECIMAL(12,2) NOT NULL,
     "taxPrice" DECIMAL(12,2) NOT NULL,
     "totalPrice" DECIMAL(12,2) NOT NULL,
     "isPaid" BOOLEAN NOT NULL DEFAULT false,

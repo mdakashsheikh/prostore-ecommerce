@@ -8,7 +8,6 @@ export const signInDefaultValues = {
     pawssword: ''
 }
 
-
 export const signUpDefaultValues = {
     name: '',
     email: '',
